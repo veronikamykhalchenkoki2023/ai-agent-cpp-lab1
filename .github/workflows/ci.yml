@@ -22,14 +22,15 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Run CI script
+      - name: Run CI script (Windows)
+        if: runner.os == 'Windows'
+        shell: cmd
+        run: call ci.bat
+
+      - name: Run CI script (Linux/macOS)
+        if: runner.os != 'Windows'
         shell: bash
-        run: |
-          if [ "$RUNNER_OS" = "Windows" ]; then
-            cmd /c ci.bat
-          else
-            bash ./ci.sh
-          fi
+        run: bash ./ci.sh
 
       - name: Upload hello artifact
         uses: actions/upload-artifact@v4
