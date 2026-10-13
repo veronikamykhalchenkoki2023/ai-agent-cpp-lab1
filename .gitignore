@@ -1,0 +1,42 @@
+# C++ / CMake local build artifacts
+build/
+out/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+CTestTestfile.cmake
+DartConfiguration.tcl
+Makefile
+compile_commands.json
+
+# Compiled binaries and libraries
+*.o
+*.obj
+*.so
+*.dylib
+*.a
+*.lib
+*.dll
+*.exe
+*.out
+*.app
+hello
+hello.exe
+
+# Logs and temporary files
+*.log
+*.tmp
+*.cache
+*.swp
+*.swo
+
+# IDE / editor metadata
+.vscode/
+.idea/
+
+# Secrets and local environment files
+.env
+.env.*
+secrets.env
+*.pem
+*.key
